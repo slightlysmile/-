@@ -28,32 +28,7 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-        var vm = new Vue({
-            el: "#login",
-            data: {
-                username: '',
-                password: '',
-            },
-            methods: {
-                login: function () {
-                    var username = this.username;
-                    var password = this.password;
-                    axios.post("https://autumnfish.cn/api/joke/list?num=6", {
-                        username: username,
-                        password: password,
-                    })
-                        .then(function (response) {
-                            // console.log(response)
-                            console.log(response.data);
-                            // console.log(this.joke);
-
-                        }, function (err) { })
-                }
-            },
-        })
-
-    </script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
